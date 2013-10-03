@@ -29,5 +29,5 @@ def Av_Window_Quality(quality_decoded, window_len):
     return average_quality
 assert Av_Window_Quality([10,20,30,40],3) == [20,30]
 
-
+#Example of calling this function
 # qualities=Av_Window_Quality(my_q_d, my_w_l)
