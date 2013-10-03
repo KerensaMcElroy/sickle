@@ -24,6 +24,6 @@ def parse_file(file):
         line2 = file.readline().rstrip()
         line3 = file.readline().rstrip()
         line4 = file.readline().rstrip()
-    return fq_obj
+    return fq_obj_list
     
 

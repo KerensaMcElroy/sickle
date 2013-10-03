@@ -8,17 +8,19 @@ from Team1_sickle.py import *
 input_file = prompt_inp()
 
 #convert first four reads into a fastq_read object
-input_fastq = get1block(input_file)
-
-# get window length
-# user input
-window_length = get_window_length(,input_fastq.len)
+input_fastq_objs = parse_file(input_file)
 
 # get quality threshold
 thresh = ask_qual_thresh()
 
+# get window length
+
+window_length = get_window_length(,100)
+
+for fastq_obj in input_fastq_objs:
+
 # decode quality string
-# 
+
 decoded = decode_quality(quality_string, offset)
 
 # calculate average quality across windows
