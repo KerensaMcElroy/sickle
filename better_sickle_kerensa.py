@@ -10,7 +10,8 @@ class fastq_read:
         
 def decode_quality(char_str, offset):
     ''' Takes fastq quality string of characters from a fastq_read object, 
-        and the relevent offset, and returns a list of integers representing 
+        and the relevent offset (i.e. 33 for Phred-33, 64 for Phred-64).
+        Returns a list of integers representing 
         phred encoded quality scores (character's ascii value minus offset) '''
        
         phred=[]
