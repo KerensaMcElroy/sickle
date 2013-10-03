@@ -15,7 +15,7 @@ thresh = ask_qual_thresh()
 
 # get window length
 
-window_length = get_window_length(,100)
+window_length = get_window_length(100)
 
 for fastq_obj in input_fastq_objs:
 
