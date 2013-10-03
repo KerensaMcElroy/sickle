@@ -10,6 +10,7 @@ class fastq_read:
         self.nucleotides=nuc_seq
         self.qualities=qual_seq
         self.name=name
+        self.len = len(nuc_seq)
         
     
         
