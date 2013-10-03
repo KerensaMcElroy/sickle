@@ -2,8 +2,9 @@ import doctest
 
 class fastq_read:
     ''' Stores the name, nucleotide sequence, and encoded quality sequence for a fastq read'''
-    legal=set('ATGCNatgcn')
+
     def __init__(self,name,nuc_seq,qual_seq):
+        legal=set('ATGCNatgcn')
         assert set(nuc_seq).issubset(legal)
         assert len(nuc_seq)==len(qual_seq)
         self.nucleotides=nuc_seq
@@ -49,6 +50,7 @@ def decode_quality(char_str, offset):
        
     return phred
         
+
         
 if __name__ == "__main__":
     doctest.testmod()
