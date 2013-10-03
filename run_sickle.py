@@ -12,7 +12,7 @@ input_fastq = get1block(input_file)
 
 # get window length
 # user input
-window_length = get_window_length(,len(input_fastq.nucleotide))
+window_length = get_window_length(,input_fastq.len)
 
 # get quality threshold
 thresh = ask_qual_thresh()
