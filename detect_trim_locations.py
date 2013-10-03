@@ -34,15 +34,18 @@ def Output_FastQ(input_read, trim_locations):
     and trimming the sequence and the quality strings according to trim_locations.
     
     Also appends the string '_trimmed' to the name.
+    
     Output_FastQ(fastq_read, [Int]) -> fastq_read
     '''
     assert isinstance(input_read, fastq_read)
     assert isinstance (trim_locations, list)
     
-    output_read = fastq_read
+    output_read = fastq_read()
     
     output_read.name = input_read.name + '_trimmed'
     output_read.nucleotides = input_read.nucleotides[trim_locations[0]:trim_locations[1]]
     output_read.qualities = input_read.qualities[trim_locations[0]:trim_locations[1]]
     
     return output_read
+    
+
