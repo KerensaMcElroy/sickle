@@ -2,7 +2,8 @@ def Av_Window_Quality(quality_decoded, window_len):
     '''This is a function to determine the average base quality
     within each window of length 'window_len', which was input by the user.
     It takes an input list of quality scores in integer form
-    called 'quality_decoded', inherited from function XXXX.
+    called 'quality_decoded', inherited from function decode_quality defined 
+    in the python script 'better_sickle_kerensa.py'.
     
     Av_Window_Quality moves along the quality score list one element at a time.
     
