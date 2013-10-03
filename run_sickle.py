@@ -21,15 +21,15 @@ for fastq_obj in input_fastq_objs:
 
 # decode quality string
 
-decoded = decode_quality(quality_string, offset)
+    decoded = decode_quality(fastq_obj.qual_seq, 33)
 
 # calculate average quality across windows
-average_qualities = Av_Window_Quality(decoded, lth)
+    average_qualities = Av_Window_Quality(decoded, window_length)
 
 # identify trim locations by comparison to threshold value
-trim_locations = Trim_Locations(average_qualities,thresh)
+    trim_locations = Trim_Locations(average_qualities,thresh)
 
 # make output object
-output = Output_FastQ(input_fastq, trim_locations)
+#output = Output_FastQ(input_fastq, trim_locations)
 
-print output
+#print output
